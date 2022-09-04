@@ -13,9 +13,24 @@
   <param name="base_frame_id" value="robot_footprint"/>
   <param name="global_frame_id" value="map"/>
 
-<param name="initial_pose_x" value="0"/>
-<param name="initial_pose_y" value="0"/>
+<param name="initial_pose_x" value="0.0"/>
+<param name="initial_pose_y" value="0.0"/>
+<param name="initial_pose_a" value="-1.57"/>
 
+<param name="min_particles" value="100"/>
+<param name="max_particles" value="1000"/>
+<param name="update_min_d" value="0.15"/>
+<param name="update_min_a" value="pi/8.0"/> 	
+
+
+<param name="laser_min_range" value="-0.1"/>
+<param name="laser_max_range" value="-0.1"/>
+<param name="laser_max_beams" value="30"/>
+<param name="laser_z_hit" value="0.95"/>
+<param name="laser_z_rand" value="1.0"/>
+<param name="laser_z_max" value="0.05"/>
+<param name="laser_model_type" value="likelihood_field"/>
+<param name="laser_z_short" value="0.05"/>
 </node>
 
 <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
